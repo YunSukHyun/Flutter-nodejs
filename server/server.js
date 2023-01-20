@@ -7,6 +7,7 @@ app.use(express.json());
 const authenticate = (req, res, next) => {
   try {
     let token;
+    console.log(req);
     if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
       token = req.headers['authorization'].split(' ')[1];
     }
